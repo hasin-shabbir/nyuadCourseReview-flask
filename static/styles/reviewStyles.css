@@ -1,0 +1,254 @@
+*{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    list-style:none;
+    box-sizing: border-box;
+}
+body{
+    font-family: GothamFont;
+}
+
+@font-face {
+    font-family: GothamFont;
+    src: url(HomepageBaukasten-Book.ttf);
+    font-weight: 300;
+}
+/*reviewNavbar styling*/
+.reviewNavbar {
+    overflow: hidden;
+    position: fixed; /* Set the reviewNavbar to fixed position */
+    top: 0; /* Position the reviewNavbar at the top of the page */
+    width: 100%; /* Full width */
+}
+.reviewNavbar{
+    z-index: 999;
+}
+nav{
+    display: flex;
+    justify-content:space-between;
+    background: #57068C;
+    height:80px;
+    width:100%;
+}
+label.logo{
+    /* margin-left: 4.8%; */
+    color:white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul{
+    margin-right:20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color:white;
+    font-size:17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform:uppercase;
+}
+
+a.active, a:hover{
+    background: #8a51af;
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float:right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display:none;
+}
+#check{
+    display: none;
+}
+.reviewNavbar-items ul li a:hover,.reviewNavbar-items ul li a:active{
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width:1050px){
+    label.logo{
+        font-size:28px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 14px;
+    }
+}
+
+@media (max-width:910px){
+    label.logo{
+        font-size:23px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 12px;
+    }
+}
+@media (max-width:900px){
+    .checkbtn{
+        display: block;
+    }
+    nav ul li{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #681f98;
+        top:80px;
+        left:-100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display:block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size:20px;
+    }
+    a:hover, a.active{
+        color:#8a51af;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+    .course-list-item{
+        font-size:15px;
+    }
+}
+
+.seperator{
+    padding-top: 90px;
+}
+/*overall ratings style*/
+.courseTitleContainer{
+    margin: 0px auto 10px;
+}
+.registerContainer{
+    margin-top: 5px;
+}
+.registerTxt p{
+    font-size: 16px;
+    display: inline;
+    user-select: none;
+    cursor: default;
+}
+.registerTxt button{display: inline;}
+.wrt-btn{
+    background-color: #57068C;
+    border: 1px solid #57068C;
+    color: white;
+    transition: 0.3s ease-in;
+}
+.wrt-btn:hover,.wrt-btn:active{
+    background-color:#8a51af;
+    border: 1px solid #8a51af;
+    color: white;
+}
+.courseTitleText{
+    font-size: 3em;
+    text-transform: capitalize;
+    cursor: default;
+    padding: 10px 10px;
+    color:#57068C;
+    font-weight: bold;
+}
+.courseTitleContainer hr{
+    margin-top: -1rem;
+}
+.overallRatingCaption{
+    color:#57068C;
+    font-size: 1.3em;
+    font-weight: 600;
+    cursor: default;
+}
+.overallRatings {
+    margin-top: 10px;
+    padding-top: 20px;
+    margin-bottom: 40px;
+}
+
+/*review styles*/
+.reviewsWrapper{
+    margin-top: 20px;
+    padding-top: 20px;
+    margin-bottom:30px;
+}
+.reviewBox{
+    min-height: 200px;
+    background-color:#dedede;
+}
+.revLine1{
+    cursor: default;
+    padding: 10px 15px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.rev-username{
+    font-size: 15px;
+    font-weight: bold;
+}
+.rev-date{
+    font-size: 15px;
+    font-weight: bold;
+}
+.revLine2{
+    cursor: default;
+    padding: 0px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.rev-metric{
+    font-size: 15px;
+}
+.rev-metric-val{
+    font-size: 15px;
+    font-weight: bolder;
+}
+.revLine3{
+    cursor: default;
+    padding: 10px 15px 0px;
+}
+.rev-text{
+    font-size: 15px;
+}
+.rev-hr{
+    margin-top: 0;
+}
+.revLine4{
+    padding: 0px 15px 10px;
+    text-align: right;
+}
+.del-rev{
+    margin-left: 5px;
+}
+.del-rev,.edit-rev{
+    cursor: pointer;
+}
+.del-rev{
+    color: darkred;
+}
+.del-rev:hover{
+    color: crimson;
+}
+.edit-rev{
+    color: blue;
+}
+.edit-rev:hover{
+    opacity: 0.8;
+}

@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<head>
+    <meta charset = "utf-8" >
+    <title>Course Reviews</title>
+    <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/dropdownStyles/tail.select-light.css') }}" />
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" />
+  
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  </head>
+
+<body>
+<script type="text/javascript" src="static/scripts/tail.select.min.js"></script>
+
+  <div class ="navbar">
+    <nav>
+
+      <div class="navbar-logo">
+
+        <label class ="logo">NYUAD Course Review</label>
+      </div>
+      <!-- <li><a href = "{{ url_for('revPage')}}">Course List</a></li> -->
+
+      <!-- <div class="navbar-items">
+        <ul>
+            <input type="checkbox" id = "check">
+            <label for="check" class = "checkbtn">
+              <i class = "fas fa-bars"></i>
+            </label>
+            <li><a class = "active" href = "#">Reviews</a></li>
+            <li><a href = "#">Websites</a></li>
+            <li><a href = "#">Facebook Groups</a></li>
+            <li><a href = "#">Contact</a></li>
+        </ul>
+      </div> -->
+
+    </nav>
+  </div>
+
+  <div class="ccontainer" style= "font-family: GothamFont;">
+    <!--PANGA ALLOWED HERE-->
+      <div class = "First-title">
+        <h2>Course List</h2>
+      </div>
+
+      <div class="Dropdowns-wrapper" style = "font-family:GothamFont;"> <!--DO NOT PANGA WITH THIS STRUCTURE-->
+        <div class="Dropdowns">
+          <div class="program-dropdown-wrapper" id="program-dropdown-wrapper">
+            <div class="program-label">
+              <label for="Program">Program</label>
+            </div>
+            <select name="program" id="program" class="program-dropdown" multiple="multiple">
+                 <optgroup label="Core Curriculum">
+                     <option value="CADT">Arts, Design, and Technology</option>
+                     <option value="CCOL">Colloquia</option>
+                     <option value="CCEA">Cultural Exploration and Analysis</option>
+                     <option value="CDAD">Data and Discovery</option>
+                     <option value="E">Experimental Inquiry</option>
+                     <option value="FYWS">First Year Writing Seminars</option>
+                     <option value="X">Islamic Studies</option>
+                     <option value="Q">Quantitative Reasoning</opti mon>
+                     <option value="CSTS">Structures of Thought and Society</option>
+                 </optgroup>
+                 <optgroup label="Previous Core Curriculum">
+                     <option value="CATI">Arts, Technology, Invention</option>
+                     <option value="CIMS">Ideas and Methods of Science</option>
+                     <option value="CPWL">Pathways of World Literature</option>
+                     <option value="CSTS-prev">Structures of Thought and Society</option>
+                 </optgroup>
+                 <optgroup label="Majors">
+                      <option value="ACS">Arab Crossroads Studies</option>
+                      <option value="ARTH">Art and Art History</option>
+                      <option value="AHC">Arts and Humanities Colloquia</option>
+                      <option value="BIOL">Biology</option>
+                      <option value="CHEM">Chemistry</option>
+                      <option value="Civ-ENGR">Civil Engineering</option>
+                      <option value="Comp-ENGR">Computer Engineering</option>
+                      <option value="CS">Computer Science</option>
+                      <option value="ECON">Economics</option>
+                      <option value="ECON-prev">Economics (Before 2017-2018)</option>
+                      <option value="Elec-ENGR">Electrical Engineering</option>
+                      <option value="FILMM">Film and New Media</option>
+                      <option value="SCIEN">Foundations of Science</option>
+                      <option value="Gen-ENGR">General Engineering</option>
+                      <option value="HIST">History</option>
+                      <option value="IM">Interactive Media</option>
+                      <option value="LAW">Legal Studies</option>
+                      <option value="LITCW">Literature and Creative Writing</option>
+                      <option value="MATH">Mathematics</option>
+                      <option value="Mech-ENGR">Mechanical Engineering</option>
+                      <option value="MUSIC">Music</option>
+                      <option value="PHIL">Philosophy</option>
+                      <option value="PHYS">Physics</option>
+                      <option value="POLSC">Political Science</option>
+                      <option value="POLSC-prev">Political Science (Before 2017-18)</option>
+                      <option value="PSYCH">Psychology</option>
+                      <option value="SRPP">Social Research and Public Policy</option>
+                      <option value="SRPP-prev">Social Research and Public Policy (Before 2017-2018)</option>
+                      <option value="THEAT">Theater</option>
+                 </optgroup>
+                 <optgroup label="Minors">
+                       <option value="AFRST">African Studies</option>
+                       <option value="ANTH">Anthropology</option>
+                       <option value="MATH-minor">Applied Mathematics</option>
+                       <option value="ACS-minor">Arab Crossroads Studies</option>
+                       <option value="AMS">Arab Music Studies</option>
+                       <option value="ARABL-minor">Arabic</option>
+                       <option value="ARTH-minor">Art History</option>
+                       <option value="CHINL-minor">Chinese</option>
+                       <option value="CS-minor">Computer Science</option>
+                       <option value="CW">Creative Writing</option>
+                       <option value="Des">Design</option>
+                       <option value="Econ-minor">Economics</option>
+                       <option value="Econ-minor-prev">Economics (Before 2017-2018)</option>
+                       <option value="ENGR-minor">Engineering</option>
+                       <option value="ENVR">Environmental Studies</option>
+                       <option value="FILMM-minor">Film and New Media</option>
+                       <option value="HERST">Heritage Studies</option>
+                       <option value="HIST-minor">History</option>
+                       <option value="IM-minor">Interactive Media</option>
+                       <option value="LAW-minor">Legal Studies</option>
+                       <option value="LT">Literature</option>
+                       <option value="MUSIC-minor">Music</option>
+                       <option value="NS">Natural Science</option>
+                       <option value="PEACE">Peace Studies</option>
+                       <option value="PHIL-minor">Philosophy</option>
+                       <option value="POLSC-minor">Political Science</option>
+                       <option value="POLSC-minor-prev">Political Science (Before 2017-2018)</option>
+                       <option value="PSYCH-minor">Psychology</option>
+                       <option value="SRPP-minor">Social Research and Public Policy</option>
+                       <option value="SRPP-minor-prev">Social Research and Public Policy (Before 2017-2018)</option>
+                       <option value="SMC">Sound and Music Computing</option>
+                       <option value="AW">The Ancient World</option>
+                       <option value="THEAT-minor">Theater</option>
+                       <option value="URBAN">Urbanization</option>
+                       <option value="VISAR">Visual Arts</option>
+                 </optgroup>
+                 <optgroup label="Pre-Professional Studies">
+                        <option value="BUSOR">Business and Organizational Studies</option>
+                        <option value="EDUC">Education</option>
+                        <option value="LEAD">Leadership and Social Entrepreneurship</option>
+                        <option value="MCC">Media, Culture and Communication</option>
+                        <option value="MUSST">Museum and Cultural Heritage Studies</option>
+                        <option value="PMHS">Premedical and Health Studies</option>
+                 </optgroup>
+                 <optgroup label="Language">
+                         <option value="ARABL">Arabic</option>
+                         <option value="CHINL">Chinese</option>
+                         <option value="FRENL">French</option>
+                </optgroup>
+                <optgroup label="Physical Education">
+                        <option value="PHYED">Physical Education</option>
+               </optgroup>
+            </select>
+          </div> <!--DO NOT PANGA WITH THIS STRUCTURE-->
+
+          <div class="level-dropdown-wrapper">
+            <div class="level-label">
+            <label for="level">Level</label>
+            </div>
+            <select name="level" id="level" class="level-dropdown">
+              <option value="1000">1000</option>
+              <option value="2000">2000</option>
+              <option value="3000">3000</option>
+              <option value="4000">4000</option>
+              <option value="5000">5000</option>
+              <option value="5000">6000</option>
+            </select>
+          </div> <!--DO NOT PANGA WITH THIS STRUCTURE-->
+        </div>
+          <div class="search-bar-wrapper">
+            <label for="search">Keywords</label>
+              <input type="text" name="searchBar" id="searchBar" placeholder="Keywords (seperated by commas)"/>
+              <button type="submit" name="Submit" id="submit" style = "color:#FEFEFE;">Submit</button>
+          </div> <!--DO NOT PANGA WITH THIS STRUCTURE-->
+        </div>
+      <div class="course-list-wrapper">
+            <ul class="course-list" id ="course-list">
+                
+                {% for course in courses %}
+                    <li class="{{course.class}}" id="{{course.list_id}}"><a href="{{url_for('reviewPage',coursename=course.title)}}">{{ course.title }}</a></li>
+                {% endfor %}
+
+            </ul>
+          </div><!--DO NOT PANGA WITH THIS STRUCTURE-->
+
+    <!--PANGA ALLOWED HERE-->
+  </div>
+  <footer class="footer">
+    <p id="author">Developed by and &copy; of <a href="https://github.com/yusra-khan" target="_blank">Yusra Khan</a> and <a href="https://github.com/hasin-shabbir/" target="_blank">Muhammad Hasin Shabbir</a></p>
+  </footer>
+  <!--NO PANGA WITH SCRIPTS AT ALL-->
+
+<script type="text/javascript" src="static/scripts/dropdowns.js"></script>
+<script type="text/javascript" src="static/scripts/search.js"></script>
+<script type="text/javascript" src="static/scripts/redirect.js"></script>
+
+</body>
+
+{% endblock %}
