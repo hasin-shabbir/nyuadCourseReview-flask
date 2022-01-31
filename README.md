@@ -18,6 +18,9 @@ The project has great scope and provides a very in-demand application to the stu
 The application is deployed [here](https://i6.cims.nyu.edu/~mhs581/web-app-do-chussar/flask.cgi/).
 Update as of 01/01/2022: The application has been removed from deployment servers temporarily.
 
+## MIGRATION:
+The application is now being migrated to a MERN stack implementation due to project needs. A separate repository may be available publicly for the migrated project.
+
 ## Collaborators:
 1- Muhammad Hasin Shabbir, [Github](https://github.com/hasin-shabbir/)
 <br>
