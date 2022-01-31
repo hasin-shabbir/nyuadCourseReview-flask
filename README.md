@@ -16,6 +16,7 @@ Note: To be redirected to a course's review page, the course title text must be 
 The project has great scope and provides a very in-demand application to the students of NYUAD.
 
 The application is deployed [here](https://i6.cims.nyu.edu/~mhs581/web-app-do-chussar/flask.cgi/).
+Update as of 01/01/2022: The application has been removed from deployment servers temporarily.
 
 ## Collaborators:
 1- Muhammad Hasin Shabbir, [Github](https://github.com/hasin-shabbir/)
